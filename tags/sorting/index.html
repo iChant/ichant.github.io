@@ -134,7 +134,7 @@
 <meta name="description" content="Gotcha!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Chant&#39;s Blog">
-<meta property="og:url" content="https://ichant.github.io/index.html">
+<meta property="og:url" content="https://ichant.github.io/tags/sorting/index.html">
 <meta property="og:site_name" content="Chant&#39;s Blog">
 <meta property="og:description" content="Gotcha!">
 <meta name="twitter:card" content="summary">
@@ -146,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="https://ichant.github.io/"/>
+  <link rel="canonical" href="https://ichant.github.io/tags/sorting/"/>
 
 
 
@@ -155,7 +155,7 @@
     sidebar: "",
   };
 </script>
-  <title>Chant's Blog</title>
+  <title>Tag: sorting | Chant's Blog</title>
   
 
 
@@ -202,8 +202,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -286,289 +285,53 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
+
+  
+  
+  
+  <div class="post-block tag">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>sorting<small>Tag</small>
+        </h1>
+      </div>
+
       
-
-  
-
-  
-  
-  
-
-  
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ichant.github.io/2018/04/17/bubble-sort/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chant">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chant's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/2018/04/17/bubble-sort/" itemprop="url">
+              
+                <span itemprop="name">Bubble Sort</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/bubble-sort/" itemprop="url">Bubble Sort</a></h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-17T14:00:11+08:00">2018-04-17</time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-04-17T14:00:11+08:00"
+              content="2018-04-17" >
+          04-17
+        </time>
+      </div>
 
-            
-            
+    </header>
+  </article>
 
-            
-          </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/Sorting/" itemprop="url" rel="index"><span itemprop="name">Sorting</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Before-Starting"><a href="#Before-Starting" class="headerlink" title="Before Starting"></a>Before Starting</h1><p>从开博客至今已经很久了，然而到现在为止也只有一篇 ‘Hello world’，一直想找点什么东西写但是又太懒，也就一直拖着不动。这几天忽然想起来要复习一下快忘光的数据结构，所以干脆从这个开始写博客，也算强迫自己做些笔记。</p>
-<p>数据结构和算法之前想买本 <em>Algorithm, 4th Edition</em> 来看，但是实在 <del>看不懂</del> 看得太慢，所以还是选择先把 <a href="https://visualgo.net/en" target="_blank" rel="noopener">VisuAlgo.net</a> 用 C++ 简单实现一遍，于是就有了这篇博客。</p>
-<h1 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h1><p>冒泡排序（bubble sort）是一种简单的排序算法，其基本原理是每次遍历一遍未排序的数列，依次比较未排序部分中相邻的两个元素，并使这两个元素按正确顺序排列，如此重复至所有元素都按正确顺序排序。很显然，每次遍历数列中未排序的部分，其结果就是将未排序部分的最小（最大）元素移动到数列的一端。</p>
-<p>对于有$n$个元素的数列来讲，排序的最坏情况就是逆序数列，此时的时间复杂度为$O(n^2)$，而当数列是已经排好序的序列时，算法有最优时间复杂度为$O(n)$. 算法的平均时间复杂度为$O(n^2)$. </p>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><a href="https://visualgo.net/en/sorting" target="_blank" rel="noopener">VisuAlgo.net</a>上给的冒泡排序的伪代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">do</span><br><span class="line">	swapped = false</span><br><span class="line">	for i = 1 to index_of_last_unsorted_element - 1</span><br><span class="line">		if left_element &gt; right_element</span><br><span class="line">			swap(left_element, right_element)</span><br><span class="line">			swapped = true</span><br><span class="line">while swapped</span><br></pre></td></tr></table></figure></p>
-<p>下面是<code>C++</code>代码的实现:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; vec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">bool</span> swapped = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">int</span> unsorted = vec.size();</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		swapped = <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; unsorted; ++i)</span><br><span class="line">			<span class="keyword">if</span> (vec[i] &lt; vec[i - <span class="number">1</span>]) &#123;</span><br><span class="line">				swap(vec[i], vec[i - <span class="number">1</span>]);</span><br><span class="line">				swapped = <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		--unsorted;</span><br><span class="line">	&#125; <span class="keyword">while</span> (swapped);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
       
     </div>
 
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ichant.github.io/2018/03/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chant">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chant's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/23/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-23T18:07:41+08:00">2018-03-23</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>This is the very first post of the blog.</p>
-<hr>
-<p>Build on Feb. 27, 2018.</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
 
@@ -871,38 +634,7 @@
 
   
   
-    
-      
-        
-      
-    
-      
-    
-  
 
-  
-    
-      <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
