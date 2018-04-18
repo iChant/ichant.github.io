@@ -130,27 +130,27 @@
 
 
   
-  <meta name="keywords" content="algorithm,sorting," />
+  <meta name="keywords" content="algorithm,sort," />
 
 
-<meta name="description" content="Before Starting从开博客至今已经很久了，然而到现在为止也只有一篇 ‘Hello world’，一直想找点什么东西写但是又太懒，也就一直拖着不动。这几天忽然想起来要复习一下快忘光的数据结构，所以干脆从这个开始写博客，也算强迫自己做些笔记。 数据结构和算法之前想买本 Algorithm, 4th Edition 来看，但是实在 看不懂 看得太慢，所以还是选择先把 VisuAlgo.net">
-<meta name="keywords" content="algorithm,sorting">
+<meta name="description" content="选择排序（Selection sort） 是一种非常简单且直观的排序算法，其主要思路是将数列中未排序部分的最小（大）元素与起始位置的元素进行交换，并放入已排序部分的末尾，直到完成排序。当未排序部分的第一个元素即为最小（大）元素时，算法仍然需要将该元素与未排序部分中的所有元素依次比较大小；而每次交换则至少有一个元素被放在正确位置，也就是说，对于一个有$N$个元素的数列，实际发生的交换次数最多为$N">
+<meta name="keywords" content="algorithm,sort">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bubble Sort">
-<meta property="og:url" content="https://ichant.github.io/2018/04/17/bubble-sort/index.html">
+<meta property="og:title" content="Selection Sort">
+<meta property="og:url" content="https://ichant.github.io/2018/04/18/selection-sort/index.html">
 <meta property="og:site_name" content="Chant&#39;s Blog">
-<meta property="og:description" content="Before Starting从开博客至今已经很久了，然而到现在为止也只有一篇 ‘Hello world’，一直想找点什么东西写但是又太懒，也就一直拖着不动。这几天忽然想起来要复习一下快忘光的数据结构，所以干脆从这个开始写博客，也算强迫自己做些笔记。 数据结构和算法之前想买本 Algorithm, 4th Edition 来看，但是实在 看不懂 看得太慢，所以还是选择先把 VisuAlgo.net">
-<meta property="og:updated_time" content="2018-04-17T06:13:08.000Z">
+<meta property="og:description" content="选择排序（Selection sort） 是一种非常简单且直观的排序算法，其主要思路是将数列中未排序部分的最小（大）元素与起始位置的元素进行交换，并放入已排序部分的末尾，直到完成排序。当未排序部分的第一个元素即为最小（大）元素时，算法仍然需要将该元素与未排序部分中的所有元素依次比较大小；而每次交换则至少有一个元素被放在正确位置，也就是说，对于一个有$N$个元素的数列，实际发生的交换次数最多为$N">
+<meta property="og:updated_time" content="2018-04-18T06:00:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bubble Sort">
-<meta name="twitter:description" content="Before Starting从开博客至今已经很久了，然而到现在为止也只有一篇 ‘Hello world’，一直想找点什么东西写但是又太懒，也就一直拖着不动。这几天忽然想起来要复习一下快忘光的数据结构，所以干脆从这个开始写博客，也算强迫自己做些笔记。 数据结构和算法之前想买本 Algorithm, 4th Edition 来看，但是实在 看不懂 看得太慢，所以还是选择先把 VisuAlgo.net">
+<meta name="twitter:title" content="Selection Sort">
+<meta name="twitter:description" content="选择排序（Selection sort） 是一种非常简单且直观的排序算法，其主要思路是将数列中未排序部分的最小（大）元素与起始位置的元素进行交换，并放入已排序部分的末尾，直到完成排序。当未排序部分的第一个元素即为最小（大）元素时，算法仍然需要将该元素与未排序部分中的所有元素依次比较大小；而每次交换则至少有一个元素被放在正确位置，也就是说，对于一个有$N$个元素的数列，实际发生的交换次数最多为$N">
 
 
 
 
 
 
-  <link rel="canonical" href="https://ichant.github.io/2018/04/17/bubble-sort/"/>
+  <link rel="canonical" href="https://ichant.github.io/2018/04/18/selection-sort/"/>
 
 
 
@@ -159,7 +159,7 @@
     sidebar: "",
   };
 </script>
-  <title>Bubble Sort | Chant's Blog</title>
+  <title>Selection Sort | Chant's Blog</title>
   
 
 
@@ -306,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ichant.github.io/2018/04/17/bubble-sort/">
+    <link itemprop="mainEntityOfPage" href="https://ichant.github.io/2018/04/18/selection-sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chant">
@@ -323,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Bubble Sort</h1>
+          <h1 class="post-title" itemprop="name headline">Selection Sort</h1>
         
 
         <div class="post-meta">
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-17T14:00:11+08:00">2018-04-17</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T13:44:02+08:00">2018-04-18</time>
             
 
             
@@ -363,7 +363,7 @@
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/Sorting/" itemprop="url" rel="index"><span itemprop="name">Sorting</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/Sort/" itemprop="url" rel="index"><span itemprop="name">Sort</span></a></span>
 
                 
                 
@@ -397,12 +397,55 @@
       
 
       
-        <h1 id="Before-Starting"><a href="#Before-Starting" class="headerlink" title="Before Starting"></a>Before Starting</h1><p>从开博客至今已经很久了，然而到现在为止也只有一篇 ‘Hello world’，一直想找点什么东西写但是又太懒，也就一直拖着不动。这几天忽然想起来要复习一下快忘光的数据结构，所以干脆从这个开始写博客，也算强迫自己做些笔记。</p>
-<p>数据结构和算法之前想买本 <em>Algorithm, 4th Edition</em> 来看，但是实在 <del>看不懂</del> 看得太慢，所以还是选择先把 <a href="https://visualgo.net/en" target="_blank" rel="noopener">VisuAlgo.net</a> 用 C++ 简单实现一遍，于是就有了这篇博客。</p>
-<h1 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h1><p>冒泡排序（bubble sort）是一种简单的排序算法，其基本原理是每次遍历一遍未排序的数列，依次比较未排序部分中相邻的两个元素，并使这两个元素按正确顺序排列，如此重复至所有元素都按正确顺序排序。很显然，每次遍历数列中未排序的部分，其结果就是将未排序部分的最小（最大）元素移动到数列的一端。</p>
-<p>对于有$n$个元素的数列来讲，排序的最坏情况就是逆序数列，此时的时间复杂度为$O(n^2)$，而当数列是已经排好序的序列时，算法有最优时间复杂度为$O(n)$. 算法的平均时间复杂度为$O(n^2)$. </p>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><a href="https://visualgo.net/en/sorting" target="_blank" rel="noopener">VisuAlgo.net</a>上给的冒泡排序的伪代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">do</span><br><span class="line">	swapped = false</span><br><span class="line">	for i = 1 to index_of_last_unsorted_element - 1</span><br><span class="line">		if left_element &gt; right_element</span><br><span class="line">			swap(left_element, right_element)</span><br><span class="line">			swapped = true</span><br><span class="line">while swapped</span><br></pre></td></tr></table></figure></p>
-<p>下面是<code>C++</code>代码的实现:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; vec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">bool</span> swapped = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">int</span> unsorted = vec.size();</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		swapped = <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; unsorted; ++i)</span><br><span class="line">			<span class="keyword">if</span> (vec[i] &lt; vec[i - <span class="number">1</span>]) &#123;</span><br><span class="line">				swap(vec[i], vec[i - <span class="number">1</span>]);</span><br><span class="line">				swapped = <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		--unsorted;</span><br><span class="line">	&#125; <span class="keyword">while</span> (swapped);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>选择排序（Selection sort） 是一种非常简单且直观的排序算法，其主要思路是将数列中未排序部分的最小（大）元素与起始位置的元素进行交换，并放入已排序部分的末尾，直到完成排序。当未排序部分的第一个元素即为最小（大）元素时，算法仍然需要将该元素与未排序部分中的所有元素依次比较大小；而每次交换则至少有一个元素被放在正确位置，也就是说，对于一个有$N$个元素的数列，实际发生的交换次数最多为$N - 1$. 因此，算法性能是由数列元素的比较次数所决定的。对于一个有$n$个元素的数列来说，选择排序算法的时间复杂度总是$O(n^2)$. 总的来说，选择算法排序有两个明显特点：</p>
+<ul>
+<li>运行时间与输入无关。无论输入数列是顺序的还是需要交换次数最多的，算法的时间复杂度都不变，仅与数列元素个数有关。</li>
+<li>数据移动次数最少。对数列元素的交换次数和数列元素个数是线性关系。</li>
+</ul>
+<p>举个例子，我们使用选择排序算法对数列${4, 5, 3, 1, 2}$进行排序：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">i</th>
+<th style="text-align:center">pos of min</th>
+<th style="text-align:center">array</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4 5 3 <em>1</em> 2</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><strong>1</strong> 5 3 4 <em>2</em></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><strong>1 2</strong> <em>3</em> 4 5</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><strong>1 2 3</strong> <em>4</em> 5</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><strong>1 2 3 4</strong> <em>5</em></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><strong>1 2 3 4 5</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><p>伪代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">repeat (num_of_elements - 1) times</span><br><span class="line">	set the first unsorted element as the min</span><br><span class="line">	for each of the unsorted elements</span><br><span class="line">		if element &lt; current_minimum</span><br><span class="line">			set element as new minimum</span><br><span class="line">	swap minimum with first unsorted position</span><br></pre></td></tr></table></figure></p>
+<p>C++ 实现：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selection_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = vec.size();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> min_pos = i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; len; ++j) &#123;</span><br><span class="line">			<span class="keyword">if</span> (vec[j] &lt; vec[min_pos])</span><br><span class="line">				min_pos = j;</span><br><span class="line">		&#125;</span><br><span class="line">        swap(vec[min_pos], vec[i]);</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -424,7 +467,7 @@
     <strong>Post author: </strong>Chant</li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://ichant.github.io/2018/04/17/bubble-sort/" title="Bubble Sort">https://ichant.github.io/2018/04/17/bubble-sort/</a>
+    <a href="https://ichant.github.io/2018/04/18/selection-sort/" title="Selection Sort">https://ichant.github.io/2018/04/18/selection-sort/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow" target="_blank">CC BY 4.0</a> unless stating additionally.</li>
@@ -439,7 +482,7 @@
           
             <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           
-            <a href="/tags/sorting/" rel="tag"># sorting</a>
+            <a href="/tags/sort/" rel="tag"># sort</a>
           
         </div>
       
@@ -452,8 +495,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/04/17/bubble-sort/" rel="next" title="Bubble Sort">
+                <i class="fa fa-chevron-left"></i> Bubble Sort
               </a>
             
           </div>
@@ -461,10 +504,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/18/selection-sort/" rel="prev" title="Selection Sort">
-                Selection Sort <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -626,7 +665,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Before-Starting"><span class="nav-number">1.</span> <span class="nav-text">Before Starting</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bubble-Sort"><span class="nav-number">2.</span> <span class="nav-text">Bubble Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Codes"><span class="nav-number">1.</span> <span class="nav-text">Codes</span></a></li></ol></div>
             
 
           </div>
